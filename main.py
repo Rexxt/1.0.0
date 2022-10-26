@@ -62,6 +62,8 @@ def main(argv):
 			tag['cl_ver_tag'] = 'tag'
 			if not tag['name'] in versions.keys():
 				versions[tag['name']] = tag
+		
+	print(f'{len(versions.keys())} versions, of which {len(releases)} releases ({len(releases)/len(versions.keys())*100}%) and {(len(tags) - len(releases))} tags ({(len(tags) - len(releases))/len(versions.keys())*100}%)')
 
 if __name__ == '__main__':
 	main(sys.argv)
